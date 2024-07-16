@@ -33,16 +33,7 @@ h1 {
 /* .dropdowns{
   background-color: #00d8ff;
 } */
-.dropdown {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.ddm:hover .dropdown {
-  opacity: 1;
-  pointer-events: auto;
-}
+ 
 .ddm{
   background-color: #00d8ff;
   border: 2px solid black;

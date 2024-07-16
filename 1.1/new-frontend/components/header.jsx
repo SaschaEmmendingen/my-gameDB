@@ -43,7 +43,7 @@ const Header = () => {
     <header className="header">
       <div className="title">My GameDB</div>
       <div className="dropdowns">
-        {/* Dropdown-Menü 1 */}
+        
         <select className='ddm' value={menu1Selection} onChange={handleMenu1Change}>
           <option value="">Dropdown 1</option>
           {menuOptions1.map(option => (
@@ -51,7 +51,6 @@ const Header = () => {
           ))}
         </select>
         
-        {/* Dropdown-Menü 2 */}
         <select className='ddm' value={menu2Selection} onChange={handleMenu2Change}>
           <option value="">Dropdown 2</option>
           {menuOptions2.map(option => (
@@ -59,7 +58,6 @@ const Header = () => {
           ))}
         </select>
         
-        {/* Dropdown-Menü 3 */}
         <select className='ddm' value={menu3Selection} onChange={handleMenu3Change}>
           <option value="">Dropdown 3</option>
           {menuOptions3.map(option => (

@@ -430,7 +430,7 @@ const Games = () => {
   const [games, setGames] = useState([]);
   const [newGame, setNewGame] = useState({
     title: "",
-    developer: "",
+    release: "",
     genre: "",
     rating: "",
     image: null,
@@ -454,13 +454,13 @@ const Games = () => {
     event.preventDefault();
 
     if (!newGame.title || !newGame.genre || !newGame.rating) {
-      console.error("All fields except developer are required.");
+      console.error("All fields except release are required.");
       return;
     }
 
     const formData = new FormData();
     formData.append("title", newGame.title);
-    formData.append("developer", newGame.developer);
+    formData.append("release", newGame.release);
     formData.append("genre", newGame.genre);
     formData.append("rating", newGame.rating);
     if (newGame.image) {
@@ -476,7 +476,7 @@ const Games = () => {
       }
       setNewGame({
         title: "",
-        developer: "",
+        release: "",
         genre: "",
         rating: "",
         image: null,
@@ -534,7 +534,7 @@ const Games = () => {
   const handleEdit = (game) => {
     setNewGame({
       title: game.title,
-      developer: game.developer,
+      release: game.release,
       genre: game.genre,
       rating: game.rating,
       image: game.image,
@@ -567,10 +567,10 @@ const Games = () => {
         />
         <input
           type="text"
-          name="developer"
-          value={newGame.developer}
+          name="release"
+          value={newGame.release}
           onChange={handleChange}
-          placeholder="Developer"
+          placeholder="Release"
         />
         <input
           type="text"
@@ -601,7 +601,7 @@ const Games = () => {
             <div className="card">
               <div className="gamelist-entry">
                 <div className="entry-text">
-                  {game.title} - {game.developer} - {game.genre} - Rating:{" "}
+                  {game.title} - {game.release} - {game.genre} - Rating:{" "}
                   {game.rating}
                 </div>
                 <div className="entry-image">

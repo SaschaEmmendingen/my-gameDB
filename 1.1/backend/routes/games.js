@@ -36,11 +36,11 @@ GameRouter.get(`/:id`, async (req, res) => {
 
 //!            POST
 GameRouter.post(`/`, upload.single('image'), async (req, res) => {
-  const { title, developer, genre, rating } = req.body;
+  const { title, release, genre, rating } = req.body;
   const image = req.file ? req.file.filename : null;
   const game = new Game({
     title: title,
-    developer: developer,
+    release: release,
     genre: genre,
     rating: rating,
     image: image
@@ -58,11 +58,11 @@ GameRouter.post(`/`, upload.single('image'), async (req, res) => {
 GameRouter.put(`/:id`, async (req, res) => {
   console.log(req.params);
   const { id } = req.params;
-  const { title, developer, genre, rating, image } = req.body;
+  const { title, release, genre, rating, image } = req.body;
   try {
     const updatedGame = await Game.findByIdAndUpdate(
       id,
-      { title: title, developer: developer, genre: genre, rating: rating, image: image },
+      { title: title, release: release, genre: genre, rating: rating, image: image },
       { new: true }
     );
     if (!updatedGame) {
