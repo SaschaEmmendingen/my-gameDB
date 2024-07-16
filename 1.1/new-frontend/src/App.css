@@ -2,13 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Montserrat;
 }
 
 body {
   background-color: rgb(43, 43, 43);
-  /* border: 2px solid red; */
   text-align: center;
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: Montserrat;
   height: 100vh;
   padding: 0;
   margin: 0;
@@ -16,25 +17,26 @@ body {
   flex-direction: column;
 }
 
-
-
 /* Header */
-
 header {
   background-color: #00d8ff;
 }
+
 h1 {
   color: #00d8ff;
-  font-size: 30px;
+  font-size: 60px;
+  padding: 0.5em;
 }
-.title{
-  font-size: 100px;
+
+.title {
+  font-size: 6.25em;
 }
-/* .dropdowns{
+
+/* .dropdowns {
   background-color: #00d8ff;
 } */
- 
-.ddm{
+
+.ddm {
   background-color: #00d8ff;
   border: 2px solid black;
   border-radius: 5px;
@@ -43,12 +45,11 @@ h1 {
   width: 15em;
 }
 
-
 /* Form */
 form {
-  /* border: 2px solid green; */
-  height: 10vh;
+  height: 18vh;
 }
+
 input {
   padding: 0.5em;
   margin: 0.5em;
@@ -57,10 +58,15 @@ input {
   background-color: black;
   color: #00d8ff;
 }
+
 input:focus {
   outline: none;
   border: 2px solid #00a0bd;
 }
+.rating-input{
+  width: 10em;
+}
+
 .formbtn {
   background-color: black;
   color: #00d8ff;
@@ -68,9 +74,9 @@ input:focus {
   border-radius: 5px;
   border: 1px solid #00d8ff;
   margin: 1em;
+  font-family: Montserrat;
+  font-weight: 600;
 }
-
-
 
 /* Game List */
 .listbtn {
@@ -82,34 +88,87 @@ input:focus {
   margin: 1em;
   width: 7em;
 }
+
+.listbtn:hover{
+  background-color: #00d8ff;
+  color: black;
+  padding: 0.6em;
+  transition: 0.1s ease;
+}
+
 ul {
   display: flex;
-  border: 2px solid #00d8ff;
+  flex-wrap: wrap;
+  border: 2px solid #e5ff00;
   list-style: none;
   font-size: 20px;
-  text-shadow: #56e6ff 1px 0 10px;
-  color: rgb(0, 0, 0);
-  /* border: 2px solid blue; */
-  /* height: 30vh; */
+  text-shadow: #56e6ff 0px 0px 4px;
+  color: #00d8ff;
+  width: 100%;
+  padding: 1em 0;
+  margin: 0;
+  justify-content: space-around; /* Karten gleichmäßig verteilen */
 }
-.card{
-  width: 20em;
-}
-.gamelist-entry {
-  border: 2px solid #00d8ff;
-  border-radius: 5px;
-  margin-left: 0; /* Kein linker Margin */
-  /* display: flex; */
-  
-}
-.entry-image{
-  border: 2px solid red;
 
+.gamelist-entry {
+  flex: 1 1 calc(20% - 10px); /* 20% des Containers minus den Abständen */
+  margin: 5px; /* Abstand zwischen den Karten */
+  box-sizing: border-box; /* Padding und Border in die Breitenberechnung einbeziehen */
 }
-.entry-text{
+
+.card {
+  /* border: 2px solid #0400ff; */
+  border-radius: 5px;
+  /* height: 100%;  */
+  box-sizing: border-box; /* Padding und Border in die Breitenberechnung einbeziehen */
+}
+
+.entry-image {
+  /* border: 2px solid rgb(183, 0, 255); */
+}
+
+.entry-title {
+  /* border: 2px solid black; */
+  border-top: 2px solid black; /* Oben */
+  border-left: 2px solid black; /* Links */
+  border-right: 2px solid black; /* Rechts */
+  /* border-bottom: none; Unten keinen Rahmen */
+  border-radius: 2px;
+}
+
+.entry-text {
   padding-top: 1em;
   padding-bottom: 1em;
-  border: 2px solid red; 
-  /* width: 500px; */
+  /* border: 2px solid red; */
   text-align: center;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #00d8ff;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  border: 2px solid black;
+  color: black;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background-color: #00b0cc;
+}
+.search-input{
+  background-color: #161616;
 }

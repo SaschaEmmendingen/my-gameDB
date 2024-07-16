@@ -555,64 +555,77 @@ const Games = () => {
 
   return (
     <div>
-      <h1>Games</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="title"
-          value={newGame.title}
-          onChange={handleChange}
-          placeholder="Game Title"
-          required
-        />
-        <input
-          type="text"
-          name="release"
-          value={newGame.release}
-          onChange={handleChange}
-          placeholder="Release"
-        />
-        <input
-          type="text"
-          name="genre"
-          value={newGame.genre}
-          onChange={handleChange}
-          placeholder="Genre"
-          required
-        />
-        <input
-          type="number"
-          name="rating"
-          value={newGame.rating}
-          onChange={handleChange}
-          placeholder="Rating (1-5)"
-          min="1"
-          max="5"
-          required
-        />
-        <input type="file" name="image" onChange={handleImageChange} />
-        <button className="formbtn" type="submit">
-          {editingGameId ? "Update Game" : "Add Game"}
-        </button>
-      </form>
+      <div className="search-input">
+        <h1>Games</h1>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="title"
+            value={newGame.title}
+            onChange={handleChange}
+            placeholder="Game Title"
+            required
+          />
+          <input
+            type="text"
+            name="release"
+            value={newGame.release}
+            onChange={handleChange}
+            placeholder="Release"
+          />
+          <input
+            type="text"
+            name="genre"
+            value={newGame.genre}
+            onChange={handleChange}
+            placeholder="Genre"
+            required
+          />
+          <input
+            type="number"
+            name="rating"
+            value={newGame.rating}
+            onChange={handleChange}
+            placeholder="Rating (1-5)"
+            min="1"
+            max="5"
+            className="rating-input"
+            required
+          />
+          <div className="file-upload">
+            <input
+              type="file"
+              name="image"
+              id="file"
+              className="inputfile"
+              onChange={handleImageChange}
+            />
+            <label id="upl" htmlFor="file">
+              Upload Image
+            </label>
+          </div>
+          <button className="formbtn" type="submit">
+            {editingGameId ? "Update Game" : "Add Game"}
+          </button>
+        </form>
+      </div>
       <ul>
         {games.map((game) => (
           <li key={game._id}>
-            <div className="card">
-              <div className="gamelist-entry">
+            <div className="gamelist-entry">
+              <div className="card">
+                <div className="entry-title">{game.title}</div>
                 <div className="entry-text">
-                  {game.title} - {game.release} - {game.genre} - Rating:{" "}
-                  {game.rating}
+                  {game.genre} - {game.release} - Rating: {game.rating}
                 </div>
                 <div className="entry-image">
-                  {" "}
                   {game.image && (
                     <img
                       src={`http://localhost:1312/upload/${game.image}`}
                       alt={game.title}
                       style={{
-                        width: "10em",
-                        height: "auto",
+                        width: "15vw",
+                        height: "14vw",
                         border: "2px solid #00d8ff",
                         borderRadius: "5px",
                       }}

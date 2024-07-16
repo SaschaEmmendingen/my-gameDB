@@ -9,21 +9,22 @@ const Header = () => {
 
   // Optionen für jedes Dropdown-Menü mit individuellen Namen
   const menuOptions1 = [
-    { id: 'opt1-1', name: 'Option 1.1' },
-    { id: 'opt1-2', name: 'Option 1.2' },
-    { id: 'opt1-3', name: 'Option 1.3' },
+    { id: 'opt1-1', name: '| Title' },
+    { id: 'opt1-2', name: '| Release' },
+    { id: 'opt1-3', name: '| Genre' },
+    { id: 'opt1-4', name: '| Rating' },
   ];
 
   const menuOptions2 = [
-    { id: 'opt2-1', name: 'Option 2.1' },
-    { id: 'opt2-2', name: 'Option 2.2' },
-    { id: 'opt2-3', name: 'Option 2.3' },
+    { id: 'opt2-1', name: '| Option 2.1' },
+    { id: 'opt2-2', name: '| Option 2.2' },
+    { id: 'opt2-3', name: '| Option 2.3' },
   ];
 
   const menuOptions3 = [
-    { id: 'opt3-1', name: 'Option 3.1' },
-    { id: 'opt3-2', name: 'Option 3.2' },
-    { id: 'opt3-3', name: 'Option 3.3' },
+    { id: 'opt3-1', name: '| Option 3.1' },
+    { id: 'opt3-2', name: '| Option 3.2' },
+    { id: 'opt3-3', name: '| Option 3.3' },
   ];
 
   // Event Handler für Auswahländerungen
@@ -41,11 +42,11 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="title">My GameDB</div>
+      <div className="title">My DB</div>
       <div className="dropdowns">
         
         <select className='ddm' value={menu1Selection} onChange={handleMenu1Change}>
-          <option value="">Dropdown 1</option>
+          <option value="">Games</option>
           {menuOptions1.map(option => (
             <option key={option.id} value={option.name}>{option.name}</option>
           ))}
