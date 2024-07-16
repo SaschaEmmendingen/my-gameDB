@@ -17,15 +17,16 @@ body {
   flex-direction: column;
 }
 
-
-
-/* Header */
-header {
+.header-music {
   background-color: #00d8ff;
 }
 
-h1 {
-  color: ;
+
+/*! GAMES */
+/*? Header */
+
+.h1-games {
+  /* color: ; */
   font-size: 60px;
   padding: 0.5em;
   text-shadow: 0px 0px 10px #00d8ff;
@@ -47,8 +48,8 @@ h1 {
   padding: 0.5em;
   width: 15em;
 }
-.header-btn{
-  background-color: #00d8ff;
+.header-btn {
+  background-color: #00c7eb;
   border-radius: 5px;
   border: 2px solid black;
   padding: 0.5em;
@@ -57,23 +58,26 @@ h1 {
   font-weight: 600;
   font-size: 1em;
   box-shadow: 0px 0px 5px 1px black;
+  text-shadow: 0px 2px 4px black;
 }
-.header-btn:hover{
+.header-btn:hover {
   background-color: black;
   color: #00d8ff;
+  text-shadow: 0px 0px 5px #00d8ff;
 }
-.header-btn:active{
+.header-btn:active {
   padding-bottom: 0.5em;
   margin: 0.9em;
   font-size: 0.9em;
   transition: 0.1s ease;
 }
-/* Form */
-form {
+
+/*? Form */
+.form-games {
   height: 18vh;
 }
 
-input {
+.input-games {
   padding: 0.5em;
   margin: 0.5em;
   border-radius: 5px;
@@ -112,13 +116,12 @@ input {
   border: 1px solid #00d8ff;
 }
 .inputfile:active + label,
-.inputfile + label:active{
+.inputfile + label:active {
   padding: 0.4em;
   /* margin-top: 0.4em; */
   transition: 0.1s ease;
-
 }
-.search-input{
+.input-search {
   background-color: #161616;
 }
 
@@ -126,8 +129,14 @@ input:focus {
   outline: none;
   /* border: 2px solid #00a0bd; */
 }
-.rating-input{
+.input-rating {
   width: 10em;
+  padding: 0.5em;
+  margin: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #00d8ff;
+  background-color: black;
+  color: #00d8ff;
 }
 
 .formbtn {
@@ -140,26 +149,26 @@ input:focus {
   font-family: Montserrat;
   font-weight: 600;
   box-shadow: 0px 0px 5px #00d8ff;
+  width: 10em;
 }
-.formbtn:hover{
+.formbtn:hover {
   box-shadow: 0px 0px 5px 1px #00ff0d;
   color: black;
   background-color: #00ff0d;
   font-weight: 700;
 }
-.formbtn:active{
-  padding: 0.9em;
-  margin: 0.9em;
+.formbtn:active {
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
   transition: 0.1s ease;
+  margin: 1em;
 }
-.btn-active{
-
+.btn-active {
 }
-/* Game List */
 
 
-
-.del-btn{
+/*? Game List */
+.del-btn {
   background-color: black;
   color: #00d8ff;
   padding: 0.5em;
@@ -170,7 +179,7 @@ input:focus {
   box-shadow: 0px 0px 5px #00d8ff;
 }
 
-.edit-btn{
+.edit-btn {
   background-color: black;
   color: #00d8ff;
   padding: 0.5em;
@@ -181,24 +190,27 @@ input:focus {
   box-shadow: 0px 0px 5px #00d8ff;
 }
 
-.del-btn:hover{
+.del-btn:hover {
   background-color: #ff0000;
   color: black;
-  padding: 0.2em;
-  transition: 0.1s ease;
   box-shadow: 0px 0px 5px #ff0000;
   border: 1px solid red;
 }
-.edit-btn:hover{
+.edit-btn:hover {
   background-color: #fbff00;
   color: black;
-  padding: 0.2em;
-  transition: 0.1s ease;
   box-shadow: 0px 0px 5px #fbff00;
   border: 1px solid #fbff00;
 }
-
-ul {
+.edit-btn:active {
+  padding: 0.2em;
+  transition: 0.1s ease;
+}
+.del-btn:active {
+  padding: 0.2em;
+  transition: 0.1s ease;
+}
+.ul-games {
   display: flex;
   flex-wrap: wrap;
   border: 2px solid #a8a8a8;
@@ -242,3 +254,8 @@ ul {
   /* border: 2px solid red; */
   text-align: center;
 }
+
+
+/*! MUSIC */
+/*? Header  */
+

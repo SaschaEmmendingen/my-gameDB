@@ -64,11 +64,11 @@ const Header = () => {
     //     </select>
     //   </div>
     // </header>
-    <header className="header">
+    <header className="header-music">
       <p className="title">My DB</p>
       <button className='header-btn'>Games</button>
-      <button className='header-btn'>Button 2</button>
-      <button className='header-btn'>Button 3</button>
+      <button className='header-btn'>Music</button>
+      <button className='header-btn'>Private</button>
     </header>
   );
 };

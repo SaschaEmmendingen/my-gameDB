@@ -25,43 +25,6 @@ const Games = () => {
     }
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    if (!newGame.title || !newGame.genre || !newGame.rating) {
-      console.error("All fields except release are required.");
-      return;
-    }
-
-    const formData = new FormData();
-    formData.append("title", newGame.title);
-    formData.append("release", newGame.release);
-    formData.append("genre", newGame.genre);
-    formData.append("rating", newGame.rating);
-    if (newGame.image) {
-      formData.append("image", newGame.image);
-      console.log("Image is included in FormData:", newGame.image);
-    }
-
-    try {
-      if (editingGameId) {
-        await updateGame(editingGameId, formData);
-      } else {
-        await addGame(formData);
-      }
-      setNewGame({
-        title: "",
-        release: "",
-        genre: "",
-        rating: "",
-        image: null,
-      });
-      setEditingGameId(null);
-    } catch (error) {
-      console.error("Error saving game:", error);
-    }
-  };
-
   const addGame = async (game) => {
     try {
       const response = await axios.post(
@@ -106,6 +69,43 @@ const Games = () => {
     }
   };
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (!newGame.title || !newGame.genre || !newGame.rating) {
+      console.error("All fields except release are required.");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("title", newGame.title);
+    formData.append("release", newGame.release);
+    formData.append("genre", newGame.genre);
+    formData.append("rating", newGame.rating);
+    if (newGame.image) {
+      formData.append("image", newGame.image);
+      console.log("Image is included in FormData:", newGame.image);
+    }
+
+    try {
+      if (editingGameId) {
+        await updateGame(editingGameId, formData);
+      } else {
+        await addGame(formData);
+      }
+      setNewGame({
+        title: "",
+        release: "",
+        genre: "",
+        rating: "",
+        image: null,
+      });
+      setEditingGameId(null);
+    } catch (error) {
+      console.error("Error saving game:", error);
+    }
+  };
+
   const handleEdit = (game) => {
     setNewGame({
       title: game.title,
@@ -129,10 +129,11 @@ const Games = () => {
 
   return (
     <div>
-      <div className="search-input">
-        <h1>Games</h1>
-        <form onSubmit={handleSubmit}>
+      <div className="input-search">
+        <p className="h1-games">Games</p>
+        <form className="form-games" onSubmit={handleSubmit}>
           <input
+            className="input-games"
             type="text"
             name="title"
             maxLength={32}
@@ -142,6 +143,7 @@ const Games = () => {
             required
           />
           <input
+            className="input-games"
             type="text"
             name="release"
             maxLength={4}
@@ -150,6 +152,7 @@ const Games = () => {
             placeholder="Release"
           />
           <input
+            className="input-games"
             type="text"
             name="genre"
             value={newGame.genre}
@@ -165,7 +168,7 @@ const Games = () => {
             placeholder="Rating (1-5)"
             min="1"
             max="5"
-            className="rating-input"
+            className="input-rating"
             required
           />
           <div className="file-upload">
@@ -185,7 +188,7 @@ const Games = () => {
           </button>
         </form>
       </div>
-      <ul>
+      <ul className="ul-games">
         {games.map((game) => (
           <li key={game._id}>
             <div className="gamelist-entry">

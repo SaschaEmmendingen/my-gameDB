@@ -2,6 +2,9 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import GameRouter from "./routes/games.js";
+import MusicRouter from "./routes/music.js";
+
+
 import path from "path";
 import { fileURLToPath } from 'url';
 
@@ -25,6 +28,10 @@ mongoose
   .catch((err) => console.error("MongoDB connection error:", err));
 
 app.use(`/api/games`, GameRouter);
-
+app.use(`/api/music`, MusicRouter);
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
 const PORT = process.env.PORT || 1312;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
