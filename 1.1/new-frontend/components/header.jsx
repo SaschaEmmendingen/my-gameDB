@@ -41,31 +41,34 @@ const Header = () => {
   };
 
   return (
+    // <header className="header">
+    //   <div className="title">My DB</div>
+    //   <div className="dropdowns">
+    //     <select className='ddm' value={menu1Selection} onChange={handleMenu1Change}>
+    //       <option value="">Games</option>
+    //       {menuOptions1.map(option => (
+    //         <option key={option.id} value={option.name}>{option.name}</option>
+    //       ))}
+    //     </select>
+    //     <select className='ddm' value={menu2Selection} onChange={handleMenu2Change}>
+    //       <option value="">Dropdown 2</option>
+    //       {menuOptions2.map(option => (
+    //         <option key={option.id} value={option.name}>{option.name}</option>
+    //       ))}
+    //     </select>
+    //     <select className='ddm' value={menu3Selection} onChange={handleMenu3Change}>
+    //       <option value="">Dropdown 3</option>
+    //       {menuOptions3.map(option => (
+    //         <option key={option.id} value={option.name}>{option.name}</option>
+    //       ))}
+    //     </select>
+    //   </div>
+    // </header>
     <header className="header">
-      <div className="title">My DB</div>
-      <div className="dropdowns">
-        
-        <select className='ddm' value={menu1Selection} onChange={handleMenu1Change}>
-          <option value="">Games</option>
-          {menuOptions1.map(option => (
-            <option key={option.id} value={option.name}>{option.name}</option>
-          ))}
-        </select>
-        
-        <select className='ddm' value={menu2Selection} onChange={handleMenu2Change}>
-          <option value="">Dropdown 2</option>
-          {menuOptions2.map(option => (
-            <option key={option.id} value={option.name}>{option.name}</option>
-          ))}
-        </select>
-        
-        <select className='ddm' value={menu3Selection} onChange={handleMenu3Change}>
-          <option value="">Dropdown 3</option>
-          {menuOptions3.map(option => (
-            <option key={option.id} value={option.name}>{option.name}</option>
-          ))}
-        </select>
-      </div>
+      <p className="title">My DB</p>
+      <button className='header-btn'>Games</button>
+      <button className='header-btn'>Button 2</button>
+      <button className='header-btn'>Button 3</button>
     </header>
   );
 };

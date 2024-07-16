@@ -1,5 +1,5 @@
 import "./App.css";
-import AddGameForm from "../components/new";
+import AddGameForm from "../components/game-db.jsx";
 import Header from "../components/header.jsx";
 
 

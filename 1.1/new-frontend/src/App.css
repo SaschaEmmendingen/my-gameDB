@@ -17,25 +17,28 @@ body {
   flex-direction: column;
 }
 
+
+
 /* Header */
 header {
   background-color: #00d8ff;
 }
 
 h1 {
-  color: #00d8ff;
+  color: ;
   font-size: 60px;
   padding: 0.5em;
+  text-shadow: 0px 0px 10px #00d8ff;
 }
 
 .title {
-  font-size: 6.25em;
+  font-size: 100px;
+  text-shadow: 0px 0px 10px black;
 }
 
 /* .dropdowns {
   background-color: #00d8ff;
 } */
-
 .ddm {
   background-color: #00d8ff;
   border: 2px solid black;
@@ -44,7 +47,27 @@ h1 {
   padding: 0.5em;
   width: 15em;
 }
-
+.header-btn{
+  background-color: #00d8ff;
+  border-radius: 5px;
+  border: 2px solid black;
+  padding: 0.5em;
+  margin: 1em;
+  width: 9em;
+  font-weight: 600;
+  font-size: 1em;
+  box-shadow: 0px 0px 5px 1px black;
+}
+.header-btn:hover{
+  background-color: black;
+  color: #00d8ff;
+}
+.header-btn:active{
+  padding-bottom: 0.5em;
+  margin: 0.9em;
+  font-size: 0.9em;
+  transition: 0.1s ease;
+}
 /* Form */
 form {
   height: 18vh;
@@ -58,10 +81,50 @@ input {
   background-color: black;
   color: #00d8ff;
 }
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  font-size: 0.9em;
+  font-weight: 600;
+  background-color: black;
+  display: inline-block;
+  padding: 0.5em;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0.5em;
+  border: 1px solid black;
+  color: #00d8ff;
+  box-shadow: 0px 0px 5px #00d8ff;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  box-shadow: 0px 0px 5px 1px #00d8ff;
+  color: black;
+  background-color: #00d8ff;
+  border: 1px solid #00d8ff;
+}
+.inputfile:active + label,
+.inputfile + label:active{
+  padding: 0.4em;
+  /* margin-top: 0.4em; */
+  transition: 0.1s ease;
+
+}
+.search-input{
+  background-color: #161616;
+}
 
 input:focus {
   outline: none;
-  border: 2px solid #00a0bd;
+  /* border: 2px solid #00a0bd; */
 }
 .rating-input{
   width: 10em;
@@ -76,10 +139,27 @@ input:focus {
   margin: 1em;
   font-family: Montserrat;
   font-weight: 600;
+  box-shadow: 0px 0px 5px #00d8ff;
 }
+.formbtn:hover{
+  box-shadow: 0px 0px 5px 1px #00ff0d;
+  color: black;
+  background-color: #00ff0d;
+  font-weight: 700;
+}
+.formbtn:active{
+  padding: 0.9em;
+  margin: 0.9em;
+  transition: 0.1s ease;
+}
+.btn-active{
 
+}
 /* Game List */
-.listbtn {
+
+
+
+.del-btn{
   background-color: black;
   color: #00d8ff;
   padding: 0.5em;
@@ -87,21 +167,43 @@ input:focus {
   border: 1px solid #00d8ff;
   margin: 1em;
   width: 7em;
+  box-shadow: 0px 0px 5px #00d8ff;
 }
 
-.listbtn:hover{
-  background-color: #00d8ff;
+.edit-btn{
+  background-color: black;
+  color: #00d8ff;
+  padding: 0.5em;
+  border-radius: 5px;
+  border: 1px solid #00d8ff;
+  margin: 1em;
+  width: 7em;
+  box-shadow: 0px 0px 5px #00d8ff;
+}
+
+.del-btn:hover{
+  background-color: #ff0000;
   color: black;
-  padding: 0.6em;
+  padding: 0.2em;
   transition: 0.1s ease;
+  box-shadow: 0px 0px 5px #ff0000;
+  border: 1px solid red;
+}
+.edit-btn:hover{
+  background-color: #fbff00;
+  color: black;
+  padding: 0.2em;
+  transition: 0.1s ease;
+  box-shadow: 0px 0px 5px #fbff00;
+  border: 1px solid #fbff00;
 }
 
 ul {
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid #e5ff00;
+  border: 2px solid #a8a8a8;
   list-style: none;
-  font-size: 20px;
+  font-size: 17px;
   text-shadow: #56e6ff 0px 0px 4px;
   color: #00d8ff;
   width: 100%;
@@ -128,12 +230,10 @@ ul {
 }
 
 .entry-title {
-  /* border: 2px solid black; */
-  border-top: 2px solid black; /* Oben */
-  border-left: 2px solid black; /* Links */
-  border-right: 2px solid black; /* Rechts */
-  /* border-bottom: none; Unten keinen Rahmen */
+  border: 1px solid #00d8ff;
+  border-bottom: none;
   border-radius: 2px;
+  box-shadow: 0px -1px 3px 0px #00d8ff;
 }
 
 .entry-text {
@@ -141,34 +241,4 @@ ul {
   padding-bottom: 1em;
   /* border: 2px solid red; */
   text-align: center;
-}
-
-.inputfile {
-  width: 0.1px;
-  height: 0.1px;
-  opacity: 0;
-  overflow: hidden;
-  position: absolute;
-  z-index: -1;
-}
-
-.inputfile + label {
-  font-size: 1rem;
-  font-weight: 600;
-  background-color: #00d8ff;
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-  border: 2px solid black;
-  color: black;
-}
-
-.inputfile:focus + label,
-.inputfile + label:hover {
-  background-color: #00b0cc;
-}
-.search-input{
-  background-color: #161616;
 }
