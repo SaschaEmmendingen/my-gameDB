@@ -1,5 +1,4 @@
 // src/components/Login.js
-import React, { useState } from 'react';
 import { login } from './authService'
 import { useNavigate } from 'react-router-dom';
 
@@ -20,16 +19,16 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
+    <div className='page-login'>
+      <h2 className='h2-login'>Login</h2>
+      <form className='form-login' onSubmit={handleSubmit}>
         <div>
-          <label>Username:</label>
-          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+          <label className='label-login'>Username:</label>
+          <input className='input-login' type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         </div>
         <div>
-          <label>Password:</label>
-          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <label className='label-login'>Password:</label>
+          <input className='input-login' type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
         <button type="submit">Login</button>
         {error && <p style={{ color: 'red' }}>{error}</p>}

@@ -1,5 +1,4 @@
 // src/components/Protected.js
-import React, { useEffect, useState } from 'react';
 import { getToken, logout } from './authService';
 import { useNavigate } from 'react-router-dom';
 
@@ -15,7 +14,7 @@ const Protected = () => {
         return;
       }
 
-      const response = await fetch('http://localhost:3000/protected', {
+      const response = await fetch('http://localhost:1312/protected', {
         headers: {
           'Authorization': `Bearer ${token}`
         }
