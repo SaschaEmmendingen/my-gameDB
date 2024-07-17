@@ -1,4 +1,5 @@
 // src/components/Protected.js
+import React, { useState, useEffect } from 'react';
 import { getToken, logout } from './authService';
 import { useNavigate } from 'react-router-dom';
 
