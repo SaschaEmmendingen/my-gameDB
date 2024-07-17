@@ -21,10 +21,12 @@ body {
   background-color: #00d8ff;
 }
 
-
 /*! GAMES */
 /*? Header */
 
+.header-music {
+  height: 20vh;
+}
 .h1-games {
   /* color: ; */
   font-size: 60px;
@@ -48,29 +50,158 @@ body {
   padding: 0.5em;
   width: 15em;
 }
-.header-btn {
+
+/* //? header buttons */
+.header-btn-login {
   background-color: #00c7eb;
   border-radius: 5px;
-  border: 2px solid black;
-  padding: 0.5em;
-  margin: 1em;
-  width: 9em;
+  border: 1px solid black;
+  padding: 0.5em 3em;
+  margin: 2em;
+  /* width: 11em; */
   font-weight: 600;
   font-size: 1em;
   box-shadow: 0px 0px 5px 1px black;
   text-shadow: 0px 2px 4px black;
+  text-decoration: none;
 }
-.header-btn:hover {
-  background-color: black;
+.header-btn-login:hover {
+  background-color: rgb(89, 0, 255);
   color: #00d8ff;
-  text-shadow: 0px 0px 5px #00d8ff;
+  border: 1px solid rgb(89, 0, 255);
+  box-shadow: 0px 0px 5px 2px rgb(89, 0, 255);
+  text-shadow: 0px 2px 5px black;
 }
-.header-btn:active {
+.header-btn-login:active {
   padding-bottom: 0.5em;
   margin: 0.9em;
   font-size: 0.9em;
   transition: 0.1s ease;
+  color: #00d8ff;
 }
+.header-btn-login:visited {
+  color: black;
+}
+
+
+.header-btn-games {
+  background-color: #00c7eb;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 0.5em 3em;
+  margin: 2em;
+  /* width: 11em; */
+  font-weight: 600;
+  font-size: 1em;
+  box-shadow: 0px 0px 5px 1px black;
+  text-shadow: 0px 2px 4px black;
+  text-decoration: none;
+}
+.header-btn-games:hover {
+  background-color: blue;
+  color: #00d8ff;
+  border: 1px solid blue;
+  box-shadow: 0px 0px 5px 2px blue;
+  text-shadow: 0px 2px 5px black;
+}
+.header-btn-games:active {
+  padding-bottom: 0.5em;
+  margin: 0.9em;
+  font-size: 0.9em;
+  transition: 0.1s ease;
+  color: #00d8ff;
+}
+.header-btn-games:visited {
+  color: rgb(0, 0, 0);
+}
+
+
+
+.header-btn-music {
+  background-color: #00c7eb;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 0.5em 3em;
+  margin: 2em;
+  /* width: 11em; */
+  font-weight: 600;
+  font-size: 1em;
+  box-shadow: 0px 0px 5px 1px black;
+  text-shadow: 0px 2px 4px black;
+  text-decoration: none;
+}
+.header-btn-music:hover {
+  background-color: orange;
+  color: #00d8ff;
+  border: 1px solid orange;
+  box-shadow: 0px 0px 5px 2px orange;
+  text-shadow: 0px 2px 5px black;
+}
+.header-btn-music:active {
+  padding-bottom: 0.5em;
+  margin: 0.9em;
+  font-size: 0.9em;
+  transition: 0.1s ease;
+  color: #00d8ff;
+}
+.header-btn-music:visited {
+  color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*? Form */
 .form-games {
@@ -166,7 +297,6 @@ input:focus {
 .btn-active {
 }
 
-
 /*? Game List */
 .del-btn {
   background-color: black;
@@ -255,7 +385,5 @@ input:focus {
   text-align: center;
 }
 
-
 /*! MUSIC */
 /*? Header  */
-

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 //! ORIGIN
 const Header = () => {
@@ -66,9 +67,11 @@ const Header = () => {
     // </header>
     <header className="header-music">
       <p className="title">My DB</p>
-      <button className='header-btn'>Games</button>
-      <button className='header-btn'>Music</button>
-      <button className='header-btn'>Private</button>
+      <div className='header-btn-div'></div>
+      <br />
+      <Link to="/games" className='header-btn-games'>Games</Link>
+      <Link to="/music" className='header-btn-music'>Music</Link>
+      <Link to="/login" className='header-btn-login'>Private</Link>
     </header>
   );
 };
