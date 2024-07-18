@@ -38,10 +38,10 @@ const Protected = () => {
   };
 
   return (
-    <div>
-      <h2>Protected Page</h2>
+    <div className='page-protected'>
+      <h2 className='h2-protected'>Private DB</h2>
       <p>{message}</p>
-      <button onClick={handleLogout}>Logout</button>
+      <button className='btn-protected' onClick={handleLogout}>Logout</button>
     </div>
   );
 };
